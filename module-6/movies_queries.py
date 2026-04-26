@@ -42,7 +42,7 @@ try:
         print(f"Runtime: {film[1]}\n")
 
     # Query 4: Film names and directors grouped by director
-    cursor.execute("SELECT film_name, film_director FROM film GROUP BY film_director, film_name")
+    cursor.execute("SELECT film_name, film_director FROM film ORDER BY film_director")
     directors = cursor.fetchall()
 
     print("-- DISPLAYING Director RECORDS in Order --")
